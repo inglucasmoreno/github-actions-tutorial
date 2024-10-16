@@ -4,11 +4,24 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+    
 
 jobs:
   build:
+    
+    env:
+      platform: "DigitalOcean"
+      region: "nyc1"
+      droplet: "web"
+    
     runs-on: ubuntu-latest
 
     steps:
       - name: "Mostrar mensaje"
         run: echo "Hola mundo"
+      
+      - name: "Mostrando variables de entorno"
+        run: |
+          echo "Plataforma: ${{ env.platform }}"
+          echo "Región: ${{ env.region }}"
+          echo "Droplet: ${{ env.droplet }}"
