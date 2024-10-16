@@ -13,6 +13,8 @@ jobs:
       platform: "DigitalOcean"
       region: "nyc1"
       droplet: "web"
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
     
     runs-on: ubuntu-latest
 
@@ -26,6 +28,8 @@ jobs:
           echo "Plataforma: ${{ env.platform }}"
           echo "Región: ${{ env.region }}"
           echo "Droplet: ${{ env.droplet }}"
+          echo "Usuario: ${{ env.username }}"
+          echo "Password: ${{ env.password }}"
 
       - name: "Mostrado variables por defecto"
         run: |
