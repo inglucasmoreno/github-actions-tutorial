@@ -26,3 +26,7 @@ jobs:
           echo "Plataforma: ${{ env.platform }}"
           echo "Región: ${{ env.region }}"
           echo "Droplet: ${{ env.droplet }}"
+
+      - name: "Mostrado variables por defecto"
+        run: |
+          echo "Evento ${{ toJSON(github.event) }}"
