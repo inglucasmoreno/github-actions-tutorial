@@ -15,6 +15,7 @@ jobs:
       droplet: "web"
       username: ${{ secrets.USERNAME }}
       password: ${{ secrets.PASSWORD }}
+      version: ${{ vars.PROJECT_VERSION }}
     
     runs-on: ubuntu-latest
 
@@ -30,6 +31,7 @@ jobs:
           echo "Droplet: ${{ env.droplet }}"
           echo "Usuario: ${{ env.username }}"
           echo "Password: ${{ env.password }}"
+          echo "Versión: ${{ env.version }}"
 
       - name: "Mostrado variables por defecto"
         run: |
