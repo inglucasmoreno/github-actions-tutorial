@@ -38,3 +38,6 @@ jobs:
           echo "Github repository: ${{ github.repository }}"
           echo "Github actor: ${{ github.actor }}"
           echo "Evento ${{ toJSON(github.event) }}"
+      
+      - name: "Ejecutando contenedor"
+        run: docker-compose up -d
